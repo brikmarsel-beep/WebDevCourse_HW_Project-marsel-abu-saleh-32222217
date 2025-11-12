@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Skin Switcher</title>
+<link id='theme' rel='stylesheet' href='skin1.css'>
+<script>
+let skins = ['skin1.css','skin2.css'];
+let i=0;
+function switchSkin(){
+ i=(i+1)%skins.length;
+ document.getElementById('theme').href=skins[i];
+ console.log('Switched to', skins[i]);
+}
+</script>
+</head>
+<body>
+<h1>Skin Switcher Demo</h1>
+<button onclick='switchSkin()'>Change Skin</button>
+<p>This page changes between two CSS themes using JavaScript.</p>
+</body></html>
